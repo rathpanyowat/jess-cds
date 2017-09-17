@@ -46,7 +46,7 @@
     ?script <- (prescription)
     ?form <- (formulary{medication == script.medication})
     => 
-    (printout t "Available on Formulary" crlf)
+    (printout t ?script.medication" is available on Formulary" crlf)
     )
 
 
