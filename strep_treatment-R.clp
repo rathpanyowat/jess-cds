@@ -54,7 +54,7 @@
 
 (defrule is_contradict
     "Check if the patient is contradiction to the prescribed drug"
-    ?pt <- (patient {(past_history == "Prolonged QT") || (past_history == "C. Diff Infection") })
+    ?pt <- (patient {(past_history == "Prolonged QT") || (past_history == "C. Diff Infection") }) ;this doesn't associate a particular past history to a particular drug, for instance azithromycin to prolonged QT
     =>
     (printout t "Alert!! " ?pt.name " is contradiction to the drug " ?pt.medication " due to " ?pt.past_history crlf)
 )
